@@ -17,11 +17,14 @@ data class SongEntity(
     val id: String,
     val title: String,
     val artistName: String,
+    val artistId: String? = null,
     val albumName: String,
+    val albumId: String? = null,
     val durationMs: Long,
     val thumbnailUrl: String? = null,
     val audioUrl: String? = null,
     val source: MusicSource = MusicSource.LOCAL,
+    val sourceId: String? = null,
     val isLiked: Boolean = false,
     val isDownloaded: Boolean = false,
     val localPath: String? = null,
@@ -30,5 +33,7 @@ data class SongEntity(
     val addedToLibraryAt: Long = System.currentTimeMillis(),
     val lastPlayedAt: Long? = null,
     val playCount: Int = 0,
-    val lyrics: String? = null
+    val lyrics: String? = null,
+    val genre: String? = null,
+    val releaseYear: Int? = null
 )
